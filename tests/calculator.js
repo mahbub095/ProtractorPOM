@@ -8,7 +8,7 @@ describe('demo calculator tests', function() {
         await browser.manage().timeouts().implicitlyWait(10000)
     })
     beforeEach(async() => {
-        homepage.get('https://www.delta.com/login/loginPage?staticurl=');
+        homepage.get('https://juliemr.github.io/protractor-demo/');
 
     })
 
@@ -17,13 +17,13 @@ describe('demo calculator tests', function() {
     it('addition test', function() {
 
 
-        homepage.enterFirstNumber('admin');
+        homepage.enterFirstNumber('4');
 
-        homepage.enterSecondNumber('admin');
+        homepage.enterSecondNumber('7');
 
         homepage.clickGo();
 
-        // homepage.verifyResult('7');
+        homepage.verifyResult('11');
 
         browser.sleep(2000)
 
